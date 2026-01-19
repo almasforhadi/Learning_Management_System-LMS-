@@ -36,7 +36,11 @@ DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = ["*"]
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://learning-management-system-lms-23rs.onrender.com",  # your frontend
+    "http://127.0.0.1:3000",                                     # local React dev
+    "http://localhost:3000",                                      # local React dev alternative
+]
 # Application definition
 
 INSTALLED_APPS = [
